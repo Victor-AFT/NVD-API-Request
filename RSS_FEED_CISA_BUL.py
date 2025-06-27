@@ -10,7 +10,7 @@ barraizq=re.compile('/')
 guionmedio='-'
 dobleguionmedio='--'
 
-fichero_excel="G:\\Shared drives\\ES Oficina REE\\01 - Documentación de trabajo\\03 - Gestión de Vulnerabilidades\\Esquema_Vulnerabilidades_control-diario_ORIGINAL.xlsm"
+fichero_excel="test.xlsm"
 wb = load_workbook(fichero_excel)
 ws = wb.active
 sheet_Inventario = wb['Inventario']
