@@ -10,7 +10,7 @@ barraizq=re.compile('/')
 guionmedio='-'
 dobleguionmedio='--'
 
-fichero_excel="test.xlsm"
+fichero_excel="TEST.xlsm"
 wb = load_workbook(fichero_excel)
 ws = wb.active
 sheet_Inventario = wb['Inventario']
