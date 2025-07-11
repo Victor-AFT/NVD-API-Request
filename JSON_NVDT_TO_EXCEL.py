@@ -13,7 +13,7 @@ now = datetime.now()
 time = now.strftime("%m_%d_%Y_")
 
 url='https://services.nvd.nist.gov/rest/json/cves/1.0/'
-#name_json=path_JSON+time+"NVDT.json"
+
 name_json='03_17_2022_NVDT.json'
 file_name_csv=path_JSON+time+"format_NVDT.csv"
 
@@ -54,8 +54,7 @@ data = json.load(f)
 """variable para calcular la longitud"""
 cve=data['result']['CVE_Items']
 
-#myFile = open(file_name_csv, 'w', encoding='utf-8',newline='')
-#writer = csv.writer(myFile)
+
 
 
 fichero_excel=path_JSON+time+" CVES_NVDT.xlsx"
@@ -235,12 +234,7 @@ else:
 
     """lee la ultima fila que escribio y añade """
 
-    #wb = Workbook()
-    #ws = wb.active
-
-    #xlsx=pd.read_excel(fichero_excel)
-    #print(len(xlsx['ID_CVE']))
-    #ultima_linea=len(xlsx['ID_CVE'])+1
+  
     lista_datos=[]
 
     for cve_n in range(len(cve)):
