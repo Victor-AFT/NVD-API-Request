@@ -1,4 +1,4 @@
-#!%userprofile%\AppData\Local\Programs\Python\Python38\python.exe
+
 import os, json, csv
 from datetime import datetime
 #from requests.exceptions import HTTPError
