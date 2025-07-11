@@ -68,13 +68,6 @@ def get_http_and_exportJSON(url,NameJson):
     except Exception as err:
         print(f'Other error occurred: {err}')
 
-#if not os.path.exists(name_json):
-    #get_http_and_exportJSON(url,name_json)
-
-#if not os.path.exists(file_name_csv):
- #  NOMBRE_COLUMNAS = 'ID,PUBLISHEDATE,[REFERENCES],DESCRIPTION,VECTORSTRING,BASESCORE,VERSION,[VULNERABLE,FABRICANTE,FIRMWARE,CPE],VERSIONEND;\n'
-  # datos_cve.append(NOMBRE_COLUMNAS)
-
 
 f = open(file_name_src_zip[0],encoding='utf-8')
 data = json.load(f)
@@ -110,7 +103,7 @@ for cve_n in range(len(cve)):
 
     # REFERENCES URL
     references = data['CVE_Items'][cve_n]['cve']['references']['reference_data']
-    #CVE-2019-20417
+  
     list_references = []
     if not references:
         list_references = ['https://No exists url']
@@ -119,9 +112,9 @@ for cve_n in range(len(cve)):
     else:
 
         for r in range(len(references)):
-            # references_refsource = data['result']['CVE_Items'][cve_n]['cve']['references']['reference_data'][r]['refsource']
+         
             references_url = data['CVE_Items'][cve_n]['cve']['references']['reference_data'][r]['url']
-            #print(references_url)
+         
             list_references.append(str(references_url))
 
         datos_cve.append(list_references)
