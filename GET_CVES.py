@@ -8,7 +8,7 @@ from os import remove
 import logging
 import shutil
 
-#sellama pywget el paquete
+
 #REALIZAR PATH RELATIVOS
 path_JSON_files='JSONS\\'
 
